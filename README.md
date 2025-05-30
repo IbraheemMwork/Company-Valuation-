@@ -1,2 +1,3 @@
-# Company-Valuation-
-Pull financial Data
+#forecast weekly share price
+
+WIP still not completed 
