@@ -38,6 +38,9 @@
         article h2 {
             color: #174a7c;
         }
+        article h3 {
+            color: #95B9C7;
+        }
         footer {
             text-align: center;
             padding: 1rem;
@@ -64,17 +67,47 @@
                 <br><br> 
                 I knew this was going to be a big project and I was already feeling overwhelmed by the amount of work. So, I decided to break it down into small parts and have my prompt engineering skills help me. 
                 
+                <br><br>
+                I know I wanted to make a code that could predict stock share prices. I wanted it to help me make investments. Something that could predict the next week of share prices. I knew it was possible because I now had expierence in stock investments and had some coding knowledge.
+                
                 </b>
             </b>
             </p>
             <h2>Development Process</h2>
             <p>
-                May 26 - Research <br>
-                So I figured with my losses in stock investment and what I was taught in university was not very helpful with real life investments. Time series was not very acurate as it was only useful for Moving average stock predicitons, based on the previous amount of days. This model won't be able to identify 
+                <h3>May 26 - Research</h3> 
+                I wanted to make a model that would predict share prices. 
+                So I figured with my losses in stock investment and what I was taught in university. Time series was not very acurate as it was only useful for Moving average stock predicitons, based on the previous data. This model won't be able to identify potential lags. As well I understood that all these models don't particulary rely on fundamental aspects of an investment. So this would only be <b>based on Technical analysis</b>. 
+                
+                <br>
+                <br>
+               <h3> May 27 - The model was founded</h3> 
+                After a day of research. I found the perfect model for stock predictions. The ARIMA model which was useful for short term investments. Something I exactly needed. I came across a paper that explained it well and what the accuracy was compared to other models. <br> <br>
+                The ARIMA model stood for autoregressive integrated moving average. It use potential trends and laggards to predict share price. So this was strictly for short term investments. The ARIMA model relies on 3 coefficients: 
+                <ul>
+                    <li>P : the number of lag observations in the model, also known as the lag order.</li>
+                    <li>D: the number of times the raw observations are differenced; also known as the degree of differencing.</li>
+                    <li>Q: the size of the moving average window, also known as the order of the moving average.</li> <br>
+                    https://www.investopedia.com/terms/a/autoregressive-integrated-moving-average-arima.asp
+                </ul>
+                
+            The only cons with this model was it could not predict long term, predicts only in a short term, it can't rely on external factors.<br>Example being economical/political/company factors that significantly change the whole market in one day.</br>  
+            <br>
+                <h3>May 28 - 29 forecastweek.py</h3> 
+                It was time to work on the coding aspect of the code. As someone with some coding knowledge. I worked on this code at first with VB. It was not quick and I knew I wanted to make a webpage of this code. I decided to try Githubs' online IDE workspace which was great. I made the switch to it and found co-pilot github was helping me write the code. I could also keep track of the code if I ever felt my eyes were burning and access it when i'm traveling. 
+                
+                <br><br> The code relied on these modules, yfinance(grabbing the data from Yahoo finance), Pandas(making dataframes a.k.a charts), Matplot(making graphs), Numpy(math calculations), datetime(gather the correct date for the rows of the dataframe), statsmodel(API call to ARIMA).
+                
+                 
+                
+                
             </p>
             <h2>Challenges & Solutions</h2>
             <p>
-                <!-- Discuss any challenges and how you solved them -->
+                
+                <br><h3>May 28-29 - ARIMA Coefficient Problem</h3><br> I also had Chatgbt help me with some aspects I did not understand. One being the modules "datetime , statsmodels.tsa.arima.model". I only work with datetime a little bit, but i did have knowledge with working with huggingface API calls to models. So I understood that the model was a API call and we were using the ARIMA model. I then did some research to determine what coefficient values should I use? Co-pilot kept giving an incorrect value for q. It kept it at 0, but I checked with some websites and chatgbt to get atleast 1-3. I put it to 1 because i believed that atleast 1 moving average would be identified with the 6 months of data it was using. Especially in the short term prediction of 7 days. If I was using a month basis it would be greater.
+                
+                  <br><br><h3>May 28-29 - Weekday problem</h3><br> When testing the code. I saw it was including the weekends when predicting the share price. This would include saturday and sunday when the stock market was not even open. I had to keep this to weekdays only. So I found the datetime library. This then appended the share price to weekdays only using an empty dict called "future_dates[]". 
             </p>
             <h2>Conclusion</h2>
             <p>
