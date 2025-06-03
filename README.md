@@ -1,4 +1,4 @@
-#prediciting the share price!
+# prediciting the share price!
 
 # WIP - Not final
 
