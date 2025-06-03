@@ -1,4 +1,4 @@
-# Company-Valuation-
+# Company-Valuation
 
 # WIP - Not final
 
