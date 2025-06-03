@@ -1,4 +1,4 @@
-from flask import Flask, render_template_string, request
+from flask import Flask, render_template_string, request, send_file
 import yfinance as yf
 import pandas as pd
 import matplotlib
@@ -8,7 +8,12 @@ from datetime import timedelta
 from statsmodels.tsa.arima.model import ARIMA
 import io
 import base64
+
 app = Flask(__name__)
+
+# Load your static HTML for the homepage
+with open("index.html") as f:
+    HOME_HTML = f.read()
 
 TEMPLATE = """
 <!doctype html>
@@ -51,8 +56,12 @@ TEMPLATE = """
 <footer style="color: #89CFF0;"><b> This page was created by Ibraheem Malik - <a href="https://www.linkedin.com/in/ibraheem-malik/"> Connect with me on Linkedin! </a> </b> <br> <img src="https://media.licdn.com/dms/image/v2/D5603AQEWvDn1nTv_Cw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1715194598425?e=1753920000&v=beta&t=ma6FaoxlusnoSZfeLSBGscT1Gr745pWXyaE_TBeYPXc" style="width:50px;"> </footer>
 """
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
+@app.route('/')
+def home():
+    return HOME_HTML
+
+@app.route('/forecast', methods=['GET', 'POST'])
+def forecast():
     forecast_df = None
     plot_url = None
     ticker = None
