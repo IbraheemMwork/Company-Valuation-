@@ -146,6 +146,15 @@
                   
                   <br><br><h3>June 03 - routing issues</h3>I was having trouble routing the app.py to my blog page. I found that I did not add the actual route to app.py and I did not name my HTML page correctly. I had to change blog.html to Index.html to act as the home page. It then turns out Gitpages only supports static pages, so it cannot run python Flask services. I spent hours trying to understand why it was not running. Then after an hour of research. I figured it had to run on a separate server if my terminal is not in use. So I found a website called render that supports Flask deployments after several expensive options (render was free). Even if I am away from my laptop app.py will still run. I added a requirements txt file and had to add gun for it to support my pages. Now everything was running well. 
                   
+                  <br><br><h3>June 02 - Accuracy test </h3>
+                  I will now test the Apple chart for 7 days to see how accurate my results were. This is what my chart predicted on June 2 2025.
+                  <br>
+                  <img src="https://github.com/IbraheemMwork/Forecast-weekly-share-price/blob/main/Apple%20Inc.png?raw=true" alt="apple price june 2"width="300" height="200">
+                  <br>
+                  <img src="https://github.com/IbraheemMwork/Forecast-weekly-share-price/blob/main/AAPL%20Price%20Forecast%20for%20Next%20Week.png?raw=true"width="300" height="300">
+                  <br>
+                  <b>Result</b>
+                  <img src = "https://github.com/IbraheemMwork/Forecast-weekly-share-price/blob/main/result.png?raw=true" width="800"height="300">
             </p>
             <h2>Conclusion</h2>
             <p>
@@ -154,7 +163,7 @@
 It seems that ARIMA model is great for forecasting short-term. External events however have an extreme effect on the stock price. 
 <br>
 <br>
-Even though this model can identify trends. It’s pretty accurate if you are using the right coefficients. If you are not using the right coefficients. This model can be severely off and affect your investments. Also this model can help with investments, but should not be relied on it self. The ARIMA model is used only for a technical stand point.For ex. On June 06 When the WWDC was in the news headlines the stock shot up by $3 from the previous day. This shows how uncertain the stock market can be sometimes. Thats why it is important to use multiple indicators when making sound investments. 
+Even though this model can identify trends. It’s pretty accurate if you are using the right coefficients. If you are not using the right coefficients. This model can be severely off and affect your investments. Also this model can help with investments, but should not be relied on it self. The ARIMA model is used only for a technical stand point. For ex. On June 06 When the WWDC was in the news headlines the stock shot up by $3 from the previous day. This shows how uncertain the stock market can be sometimes. Thats why it is important to use multiple indicators when making sound investments. 
 
 <br><br>This then led to my next discovery called the sarimax model.
             </p>
