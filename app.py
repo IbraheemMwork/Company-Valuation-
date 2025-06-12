@@ -51,9 +51,10 @@ TEMPLATE = """
 {% endif %}
 <br></br>
 <br>
+This should not be only relied on for making investments. There are many factors that can affect a stock price.
 <br>
 <br>
-<footer style="color: #89CFF0;"><b> This page was created by Ibraheem Malik - <a href="https://www.linkedin.com/in/ibraheem-malik/"> Connect with me on Linkedin! </a> </b> <br> <img src="https://media.licdn.com/dms/image/v2/D5603AQEWvDn1nTv_Cw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1715194598425?e=1753920000&v=beta&t=ma6FaoxlusnoSZfeLSBGscT1Gr745pWXyaE_TBeYPXc" style="width:50px;"> </footer>
+<footer style="color: #89CFF0;"><b> This page was created by Ibraheem Malik - <a href="https://www.linkedin.com/in/ibraheem-malik/"> Connect with me on Linkedin! </a> </b> <br> <img src="https://media.licdn.com/dms/image/v2/D5603AQEWvDn1nTv_Cw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1715194598425?e=1753920000&v=beta&t=ma6FaoxlusnoSZfeLSBGscT1Gr745pWXyaE_TBeYPXc" style="width:50px;"></footer>
 """
 
 @app.route('/')
