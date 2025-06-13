@@ -1,7 +1,5 @@
-# prediciting the share price!
+#predicting the Share price for the next 7 days!
 
-# WIP - Not final
-
-The purpose is to extract company financial data in python. Then forecast the week data using ARIMA MODEL. 
+Please click this link - https://forecast-weekly-share-price.onrender.com
 
 
