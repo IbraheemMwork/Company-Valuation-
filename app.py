@@ -72,7 +72,7 @@ def forecast():
         if not ticker:
             error = "The field is blank, please input a ticker."
         else:
-            df = yf.download(ticker, period="6mo", interval="1d")
+            df = yf.download(ticker, period="3mo", interval="1d")
             if df.empty:
                 error = "This is not a valid ticker."
             else:
